@@ -1,0 +1,3 @@
+Worklog project :
+Ma 20/11 van 11u - 14u; - finished and implemented functioning Endpoint that returns image based on XY or LATLONG Coordinates
+Still todo: unittests, logging and refactoring to helper class of GPStoDecimal function and maybe makeing of URL as well
