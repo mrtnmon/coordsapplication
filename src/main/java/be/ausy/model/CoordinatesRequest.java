@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class JSONCoordsPayload {
+public class CoordinatesRequest {
     private String politieZone;
     private LocatieFormaat locatieFormaat;
     protected Locatie locatie;

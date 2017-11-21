@@ -1,12 +1,8 @@
 package be.ausy.helper;
-
-import be.ausy.model.JSONCoordsPayload;
+import be.ausy.model.CoordinatesRequest;
 import be.ausy.model.Locatie;
-import org.springframework.stereotype.Component;
-
 import java.math.BigDecimal;
 
-@Component
 public class GPSLocatieConverter {
 
     private static GPSLocatieConverter instance;
@@ -20,7 +16,7 @@ public class GPSLocatieConverter {
         return instance;
     }
 
-    public Locatie convertLocatie(JSONCoordsPayload payload){
+    public Locatie convertLocatie(CoordinatesRequest payload){
         String splittedLAT[]= payload.getLocatie().getLAT().split("\\s+");
         String splittedLONG[]= payload.getLocatie().getLONG().split("\\s+");
         double x = GPSToDecimal(Integer.valueOf(splittedLAT[1]), Integer.valueOf(splittedLAT[2]), Double.valueOf(splittedLAT[3]), splittedLAT[0]);

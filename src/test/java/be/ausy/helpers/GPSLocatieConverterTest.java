@@ -1,7 +1,7 @@
 package be.ausy.helpers;
 
 import be.ausy.helper.GPSLocatieConverter;
-import be.ausy.model.JSONCoordsPayload;
+import be.ausy.model.CoordinatesRequest;
 import be.ausy.model.Locatie;
 import be.ausy.model.LocatieFormaat;
 import org.junit.Test;
@@ -16,7 +16,7 @@ public class GPSLocatieConverterTest {
     @Test
     public void GPSLocatieConverterReturnsCorrectLocatie(){
 
-        JSONCoordsPayload payload = JSONCoordsPayload.builder()
+        CoordinatesRequest payload = CoordinatesRequest.builder()
                 .politieZone("ANW")
                 .locatieFormaat(LocatieFormaat.GPS)
                 .locatie(Locatie.builder()
@@ -27,7 +27,7 @@ public class GPSLocatieConverterTest {
 
         payload.setLocatie(locatieConverter.convertLocatie(payload));
 
-        JSONCoordsPayload expectedPayload = JSONCoordsPayload.builder()
+        CoordinatesRequest expectedPayload = CoordinatesRequest.builder()
                 .politieZone("ANW")
                 .locatieFormaat(LocatieFormaat.GPS)
                 .locatie(Locatie.builder()

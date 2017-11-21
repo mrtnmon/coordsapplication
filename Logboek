@@ -1,5 +1,6 @@
 Worklog project :
 Ma 20/11 van 11u - 14u; - finished and implemented functioning Endpoint that returns image based on XY or LATLONG Coordinates
 Still todo: unittests, logging and refactoring to helper class of GPStoDecimal function and maybe makeing of URL as well
-Ma 20/11 van 15 - 16 u; - wrote unit test for coordinatesconverter, and  refactored some code to different classes - wrote GPSLocatieConverter as a singletons
+Ma 20/11 van 15 - 16 u; - wrote unit test for coordinatesconverter, and  refactored some code to different classes - wrote GPSLocatieConverter as a singleton
 added some extra logging.
+Di 21/11 van 10 - 12 u; researching how to write correct tests, changed the returning of an array of bytes from the post method to a Resource, some code cleanup
